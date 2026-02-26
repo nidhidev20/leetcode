@@ -2,8 +2,7 @@ class Solution {
     public int[] sortByBits(int[] arr) {
         
         Integer[] ans = new Integer[arr.length];
-        int n = arr.length;
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < arr.length; i++) {
             ans[i] = arr[i];
         }
 
@@ -14,7 +13,7 @@ class Solution {
             if(bitsa == bitsb) return a - b;
             return bitsa - bitsb;
         });
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < arr.length; i++) {
             arr[i] = ans[i];
         }
         return arr;
